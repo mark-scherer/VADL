@@ -48,10 +48,15 @@ header.carousel .fill {
     background-size: cover;
 }
 
+.responsive-container {
+    width:100%;
+    position: relative;
+}
+
 .caption {
     opacity: 0;
     position: absolute;
-    bottom: 10%;
+    bottom: 25px;
     width: 100%;
     background-color: white;
     border: 1px solid white;
@@ -62,20 +67,25 @@ header.carousel .fill {
           transition: opacity 0.3s ease-out;  
 }
 
-.caption > div {
-    opacity: 1;
+.img-responsive img {
+    max-width: 100%;
+}
+
+.caption-text {
+    opacity: 0;
     text-align: center;
     color: black;
     font-size: 20px;
 }
 
-.img-caption {
-    position: relative;
+.img-responsive:hover .caption {
+   opacity: 0.75; 
 }
 
-.img-caption:hover > div {
-   opacity: 0.5; 
+.img-responsive:hover .caption-text {
+   opacity: 1; 
 }
+
 
 /* 404 Page Styles */
 

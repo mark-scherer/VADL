@@ -58,8 +58,9 @@ header.carousel .fill {
     height:100%;
 }
 
-.caption {
-    opacity: 0;
+/* Captions automatically appear when their rsp-container is hovered
+caption-specials do not */
+.caption, .caption-special, .caption-perm {
     position: absolute;
     width: 80%;
     bottom: 5%;
@@ -68,11 +69,15 @@ header.carousel .fill {
     background-color: white;
     border: 1px solid white;
     border-radius: 2px;
-  -webkit-transition: opacity 0.3s ease-out;  
+ }
+
+.caption, .caption-special {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;  
      -moz-transition: opacity 0.3s ease-out;  
       -ms-transition: opacity 0.3s ease-out;  
        -o-transition: opacity 0.3s ease-out;  
-          transition: opacity 0.3s ease-out;  
+          transition: opacity 0.3s ease-out;
 }
 
 .caption-text {
@@ -105,16 +110,11 @@ header.carousel .fill {
     visibility: hidden;
 }
 
-#Henry-Bristol-face {
-    bottom: 70%;
-    left: 2.3%;
-}
-
-.flipper-container {
+.flip-container {
     perspective: 1000px;
 }
 
-.flipper-container:hover .flipper, .flipper-container.hover .flipper {
+.flip-container:hover .flipper, .flip-container.hover .flipper {
     transform: rotateY(180deg);
 }
 
@@ -126,7 +126,7 @@ header.carousel .fill {
     padding: 10px;
 }
 
-.flipper-container, .flipper, .front, .back {
+.flip-container, .flipper, .front, .back {
     height: 250px;
     width: 100%;
 }
@@ -146,6 +146,15 @@ header.carousel .fill {
 .back {
     transform: rotateY(180deg);
     padding: 10px;
+}
+
+#Henry-Bristol-face {
+    bottom: 70%;
+    left: 2.3%;
+}
+
+#Henry-Bristol-face:hover + #Henry-Bristol-info {
+    opacity: 1.0;
 }
 
 .panel-heading {

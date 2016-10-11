@@ -112,6 +112,8 @@ caption-specials do not */
 
 .flip-container {
     perspective: 1000px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -123,7 +125,7 @@ caption-specials do not */
     transform-style: preserve-3d;
     position: relative;
     background-color: #f5f5f5;
-    padding: 10px;
+    padding: 0px;
 }
 
 .flip-container, .flipper, .front, .back {
@@ -141,11 +143,14 @@ caption-specials do not */
 .front {
     z-index: 2;
     padding: 10px;
+    overflow: hidden;
+    display: flex;
 }
 
 .back {
     transform: rotateY(180deg);
     padding: 10px;
+    overflow: auto;
 }
 
 #Henry-Bristol-face {
@@ -159,6 +164,30 @@ caption-specials do not */
 
 .panel-heading {
     vertical-align: middle;
+}
+
+.no-padding-margin {
+    padding: 0px;
+    margin: 0px;
+}
+
+.front img {
+    padding: 0px;
+    margin: auto;
+}
+
+.too-wide {
+    max-height: 100%;
+    max-width: auto;
+}
+
+.too-tall {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.tiles-4 {
+    
 }
 
 /* 404 Page Styles */

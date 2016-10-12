@@ -7,7 +7,7 @@ $(function() {
 
 	/* select all .trimmed-pic images */
 	/* first select all divs */
-	var divs = document.getElementById("div");
+	var divs = document.getElementsByTagName('div');
 	/* select all divs with child images of class .trimmed-pic */
 	for (var i = 0; i < divs.length; i++)
 	{
@@ -37,13 +37,13 @@ $(function() {
 	/* resize appropriately */
 	for (var i = 0; i < tooTall.length; i++)
 	{
-		tooTall[i].style.maxWidth = 100%;
-		tooTall[i].style.minHeight = 100%;
+		tooTall[i].style.maxWidth = '100%';
+		tooTall[i].style.minHeight = '100%';
 	}
 	for (var i = 0; i < tooWide.length; i++)
 	{
-		tooWide[i].style.maxHeight = 100%;
-		tooWide[i].style.minWidth = 100%;
+		tooWide[i].style.maxHeight = '100%';
+		tooWide[i].style.minWidth = '100%';
 	}
 }
 )

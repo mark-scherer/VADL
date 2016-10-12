@@ -1,9 +1,9 @@
 /* resizes all .trimmed-pic images to fill window based upon aspect ratios */
 
 $(function() {
-	var trimmedPicsParents[0];
-	var tooTall[0];
-	var tooWide[0];
+	var trimmedPicsParents = [];
+	var tooTall = [];
+	var tooWide = [];
 
 	/* select all .trimmed-pic images */
 	/* first select all divs */

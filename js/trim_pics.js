@@ -17,7 +17,7 @@ $(function() {
 		}
 	}
 
-	window.alert(trimmedParentPics.length);
+	window.alert(trimmedPicsParents.length);
 
 	/* sort into too-tall and too-wide */
 	for (var i = 0; i < trimmedPicsParents.length; i++)

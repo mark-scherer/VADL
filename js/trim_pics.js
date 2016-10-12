@@ -8,6 +8,7 @@ $(function() {
 	/* select all .trimmed-pic images */
 	/* first select all divs */
 	var divs = document.getElementsByTagName('div');
+	window.alert(divs.length);
 	/* select all divs with child images of class .trimmed-pic */
 	for (var i = 0; i < divs.length; i++)
 	{

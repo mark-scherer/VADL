@@ -1,8 +1,7 @@
 $(function() {
-	var tester = document.getElementsByTagName('h2');
+	var tester = document.getElementsByTagName('div');
 	for (var i = 0; i < tester.length; i++)
 	{
-		tester[i].style.fontSize = '200px';
+		console.log(tester[i].childNodes.length);
 	}	
-	window.alert(tester[0].classList);
 })

@@ -24,11 +24,6 @@ li {
     margin-bottom: 30px;
 }
 
-.img-hover:hover {
-    opacity: 0.8;
-
-}
-
 /* Home Page Carousel */
 
 header.carousel {
@@ -48,6 +43,7 @@ header.carousel .fill {
     background-size: cover;
 }
 
+/* responsive images */
 .rsp-container {
     width:100%;
     position: relative;
@@ -58,6 +54,11 @@ header.carousel .fill {
     height:100%;
 }
 
+.rsp-container:hover .caption {
+   opacity: 1; 
+}
+
+/* Captions */
 /* Captions automatically appear when their rsp-container is hovered
 caption-specials do not */
 .caption, .caption-special, .caption-perm {
@@ -86,10 +87,7 @@ caption-specials do not */
     font-size: 18px;
 }
 
-.rsp-container:hover .caption {
-   opacity: 1; 
-}
-
+/* Facebox */
 .face-box {
     position: absolute;
     width:8.78%;
@@ -110,14 +108,12 @@ caption-specials do not */
     visibility: hidden;
 }
 
+/* Flippers */
 .flip-container {
     perspective: 1000px;
     margin-top: 15px;
     margin-bottom: 15px;
-}
-
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
+    width: 100%;
 }
 
 .flipper {
@@ -128,9 +124,13 @@ caption-specials do not */
     padding: 0px;
 }
 
-.flip-container, .flipper, .front, .back {
-    height: 250px;
+.flipper, .front, .back {
+    height: 100%;
     width: 100%;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
 }
 
 .front, .back {
@@ -153,6 +153,12 @@ caption-specials do not */
     overflow: auto;
 }
 
+.front img {
+    padding: 0px;
+    margin: auto;
+}
+
+/* team picture individual CSS */
 #Henry-Bristol-face {
     bottom: 70%;
     left: 2.3%;
@@ -162,6 +168,53 @@ caption-specials do not */
     opacity: 1.0;
 }
 
+/* News */
+.news-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.news-item {
+    height: 200px;
+    position: relative;
+}
+
+.news-pic-container {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.news-description {
+    position: absolute;
+    width: 55%;
+    left: 40%;
+    top:50%;
+   -webkit-transform: translate(0%, -50%);
+     -moz-transition: translate(0%, -50%);  
+      -ms-transition: translate(0%, -50%);  
+       -o-transition: translate(0%, -50%); 
+          transition: translate(0%, -50%);
+    font-size: 20px;
+}
+
+.trimmed-pic {
+    position: absolute;
+    top: 50%;
+    /* If when enlarging, side boundaries are met first */
+    /* else if when enlarging, top & bottom are met first, max-width: 100%; */
+    /* not including else leads to picture of uniform height but not width */
+    display: block;
+    left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+     -moz-transition: translate(-50%, -50%);  
+      -ms-transition: translate(-50%, -50%);  
+       -o-transition: translate(-50%, -50%); 
+          transition: translate(-50%, -50%);
+}
+
+/* misc */
 .panel-heading {
     vertical-align: middle;
 }
@@ -169,11 +222,6 @@ caption-specials do not */
 .no-padding-margin {
     padding: 0px;
     margin: 0px;
-}
-
-.front img {
-    padding: 0px;
-    margin: auto;
 }
 
 .too-wide {
@@ -186,33 +234,26 @@ caption-specials do not */
     max-height: auto;
 }
 
-.tiles-4 {
-    
+.block {
+    display: block;
+}
+
+.tall-300 {
+    height: 300px;
+}
+
+.tall-250 {
+    height: 250px;
+}
+
+.tall-200 {
+    height: 200px;
 }
 
 /* 404 Page Styles */
 
 .error-404 {
     font-size: 100px;
-}
-
-/* Pricing Page Styles */
-
-.price {
-    display: block;
-    font-size: 50px;
-    line-height: 50px;
-}
-
-.price sup {
-    top: -20px;
-    left: 2px;
-    font-size: 20px;
-}
-
-.period {
-    display: block;
-    font-style: italic;
 }
 
 /* Footer Styles */

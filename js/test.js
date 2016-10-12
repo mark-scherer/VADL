@@ -4,4 +4,5 @@ $(function() {
 	{
 		tester[i].style.fontSize = '200px';
 	}	
+	window.alert(tester[0].classList);
 })

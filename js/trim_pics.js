@@ -11,6 +11,7 @@ $(function() {
 	/* select all divs with child images of class .trimmed-pic */
 	for (var i = 0; i < divs.length; i++)
 	{
+		console.log(divs[i].childNodes[0].classList.length);
 		if (divs[i].childNodes[0].length > 0)
 		{
 			if (divs[i].childNodes[0].classList.contains("trimmed-pic"))

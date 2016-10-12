@@ -14,11 +14,11 @@ $(function() {
 		console.log(divs[i].childNodes.length);
 		if (divs[i].childNodes[0].length > 0)
 		{
-			if (divs[i].childNodes[0].classList.contains("trimmed-pic"))
+			/*if (divs[i].childNodes[0].classList.contains("trimmed-pic"))
 			{
 			window.alert("match");
 			trimmedPicsParents.push(divs[i]);
-			}
+			}*/
 		}
 	}
 

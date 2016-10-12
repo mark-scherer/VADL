@@ -11,10 +11,13 @@ $(function() {
 	/* select all divs with child images of class .trimmed-pic */
 	for (var i = 0; i < divs.length; i++)
 	{
-		if (divs[i].childNodes[0].classList.contains("trimmed-pic"))
+		if (divs[i].childNodes[0].length > 0)
 		{
+			if (divs[i].childNodes[0].classList.contains("trimmed-pic"))
+			{
 			window.alert("match");
 			trimmedPicsParents.push(divs[i]);
+			}
 		}
 	}
 

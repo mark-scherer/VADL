@@ -13,6 +13,7 @@ $(function() {
 	{
 		if (divs[i].childNodes[0].className === "trimmed-pic")
 		{
+			window.alert("match");
 			trimmedPicsParents.push(divs[i]);
 		}
 	}

@@ -19,6 +19,8 @@ $(function() {
 		var aWindow = windows[i].offsetWidth / windows[i].offsetHeight;
 		var aImg = images[i].offsetWidth / images[i].offsetHeight;
 
+		console.log("Window AR: " + aWindow + ", Image AR: " + aImg);
+
 		if (aWindow > aImg)
 		{
 			tooTall.push(images[i]);

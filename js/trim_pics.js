@@ -1,6 +1,9 @@
 /* resizes all .trimmed-pic images to fill window based upon aspect ratios */
 
-$( onload = function() {
+window.document.body.addEventListener('load', trimPics);
+
+
+function trimPics() {
 	var windows = [];
 	var images = [];
 	var tooTall = [];
@@ -56,4 +59,3 @@ $( onload = function() {
 	}
 
 }
-)

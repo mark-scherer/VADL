@@ -19,7 +19,7 @@ $(function() {
 		var aWindow = windows[i].offsetWidth / windows[i].offsetHeight;
 		var aImg = images[i].offsetWidth / images[i].offsetHeight;
 
-		console.log("Window AR: " + aWindow + ", Image AR: " + aImg);
+		console.log("Img width: " + images[i].offsetWidth + ", Img maxHeight: " + imagess[i].offsetHeight + ", AR: " + aImg);
 
 		if (aWindow > aImg)
 		{

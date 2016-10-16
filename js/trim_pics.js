@@ -1,56 +1,53 @@
 /* resizes all .trimmed-pic images to fill window based upon aspect ratios */
 
 $(function() {
-	var trimmedPicsParents = [];
+	var windows = [];
+	var images = [];
 	var tooTall = [];
 	var tooWide = [];
+	var sameSize = [];
 
-	/* select all .trimmed-pic images */
-	/* first select all divs */
-	var divs = document.getElementsByTagName('div');
-	/* select all divs with child images of class .trimmed-pic */
-	for (var i = 0; i < divs.length; i++)
+	/* select windows and images */
+	windows = document.getElementsByClassName("trimmed-pic-container");
+	images = document.getElementsByClassName("trimmed-pic");
+
+	/* determine type for each window-image combo */
+	for (var i = 0; i < windows.length; i++) 
 	{
-		console.log(divs[i].childNodes.length);
-		if (divs[i].childNodes[0].length > 0)
+		var aWindow = windows[i].offsetWidth / windows[i].offsetHeight;
+		var aImg = images[i].offsetWidth / images[i].offsetHeight;
+
+		if (aWindow > aImg)
 		{
-			/*if (divs[i].childNodes[0].classList.contains("trimmed-pic"))
-			{
-			window.alert("match");
-			trimmedPicsParents.push(divs[i]);
-			}*/
+			tooTall.push(images[i]);
+		}
+		if (aWindow < aImg)
+		{
+			tooWide.push(images[i]);
+		}
+		if (aWindow === aImg)
+		{
+			sameSize.push(images[i]);
 		}
 	}
 
-	window.alert(trimmedPicsParents.length);
-
-	/* sort into too-tall and too-wide */
-	for (var i = 0; i < trimmedPicsParents.length; i++)
-	{
-		/* find window and image aspect ratio */
-		var windowAspect = i.clientWidth / i.clientHeight;
-		var imgAspect = i.childNodes[0].clientWidth / i.childNodes[0].clientHeight;
-		/* add to correct list */
-		if (imgAspect > windowAspect)
-		{
-			tooTall.push(i.childNodes[0]);
-		}
-		if (imgAspect < windowAspect)
-		{
-			tooWide.push(i.childNodes[0]);
-		}
-	}
-
-	/* resize appropriately */
+	/* alter image properties */
 	for (var i = 0; i < tooTall.length; i++)
 	{
-		tooTall[i].style.maxWidth = '100%';
-		tooTall[i].style.minHeight = '100%';
+		tooTall[i].style.minHeight = "100%";
+		tooTall[i].style.maxWidth = "100%";
 	}
+	
 	for (var i = 0; i < tooWide.length; i++)
 	{
-		tooWide[i].style.maxHeight = '100%';
-		tooWide[i].style.minWidth = '100%';
+		tooWide[i].style.minWidth = "100%";
+		tooWide[i].style.maxHeight = "100%";
 	}
+	for (var i = 0; i < sameSize.length; i++)
+	{
+		sameSize[i].style.maxWidth = "100%";
+		sameSize[i].style.maxHeight = "100%";
+	}
+
 }
 )

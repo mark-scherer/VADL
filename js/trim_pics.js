@@ -25,11 +25,11 @@ $(function() {
 		{
 			tooTall.push(images[i]);
 		}
-		if (aWindow < aImg)
+		else if (aWindow < aImg)
 		{
 			tooWide.push(images[i]);
 		}
-		if (aWindow === aImg)
+		else
 		{
 			sameSize.push(images[i]);
 		}

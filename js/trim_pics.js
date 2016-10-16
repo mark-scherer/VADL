@@ -11,6 +11,8 @@ $(function() {
 	windows = document.getElementsByClassName("trimmed-pic-container");
 	images = document.getElementsByClassName("trimmed-pic");
 
+	console.log("Windows: " + windows.length + ", images: " + images.length);
+
 	/* determine type for each window-image combo */
 	for (var i = 0; i < windows.length; i++) 
 	{
@@ -30,6 +32,8 @@ $(function() {
 			sameSize.push(images[i]);
 		}
 	}
+
+	console.log("tooTall: " + tooTall.length + ", tooWide: " + tooWide.length + ", sameSize: " + sameSize.length);
 
 	/* alter image properties */
 	for (var i = 0; i < tooTall.length; i++)
